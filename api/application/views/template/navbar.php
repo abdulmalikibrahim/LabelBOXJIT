@@ -1,0 +1,1 @@
+<div class="w-100 text-light" style="height:90px; background:#0077C3;"><h3 style="font-family:cooper black; font-size:3rem; position:absolute; top:1rem; left:2rem;"><?= $title; ?></h3></div>
