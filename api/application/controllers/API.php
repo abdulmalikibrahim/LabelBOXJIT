@@ -580,6 +580,7 @@ class API extends MY_Controller {
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
         ob_end_clean();
+        $dompdf->get_canvas()->get_cpdf()->setEncryption('adm');
         $dompdf->stream($vendor_alias." (".$vendor_code.").pdf", ["Attachment" => false]);
         $updateDate["download_dn"] = "1";
         $data = $this->model->update("master","vendor_code = '$vendor_code'",$updateDate);
